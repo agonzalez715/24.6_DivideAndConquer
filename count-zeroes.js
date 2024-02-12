@@ -8,7 +8,7 @@ function countZeroes(arr) {
     if (arr[mid] === 1) { //check if the element at the middle index mid is equal to 1
         left = mid = + 1; //if the element at mid is 1, update the 'left' pointer to mid + 1, this effectively moves the search range to the right half of the array 
     } else if (arr[mid] === 0) { //Check if the element at the middle index mid is equal to 0.
-        right = mid - 1 //f the element at mid is 0, update the right pointer to mid - 1. This effectively moves the search range to the left half of the array.
+        right = mid + 1 //f the element at mid is 0, update the right pointer to mid - 1. This effectively moves the search range to the left half of the array.
     }
   }
   // At this point, left points to the first occurrence of 0
