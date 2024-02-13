@@ -6,7 +6,7 @@ function countZeroes(arr) {
   while(left <= right) { //this initiates the while loop that continues until until the condition in parentheses is met, this loop is responsible  for the binary search
     let mid = Math.floor((left + right) / 2); //Calculate the index of the middle element using binary search by taking the floor of the average of left and right.
     if (arr[mid] === 1) { //check if the element at the middle index mid is equal to 1
-        left = mid = + 1; //if the element at mid is 1, update the 'left' pointer to mid + 1, this effectively moves the search range to the right half of the array 
+        left = mid + 1; //if the element at mid is 1, update the 'left' pointer to mid + 1, this effectively moves the search range to the right half of the array 
     } else if (arr[mid] === 0) { //Check if the element at the middle index mid is equal to 0.
         right = mid + 1 //f the element at mid is 0, update the right pointer to mid - 1. This effectively moves the search range to the left half of the array.
     }
